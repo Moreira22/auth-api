@@ -42,9 +42,9 @@ Este projeto é uma API de autenticação com a capacidade de cadastrar produtos
 ```
 POST /api/auth/signup
 {
- "username": "example_user",
- "email": "user@example.com",
- "password": "password"
+    "username": "example_user",
+    "email": "user@example.com",
+    "password": "password"
 }
 ```
 
@@ -53,8 +53,8 @@ POST /api/auth/signup
 ```
 POST /api/auth/signin
 {
- "username": "example_user",
- "password": "password"
+    "username": "example_user",
+    "password": "password"
 }
 ```
    
@@ -63,9 +63,9 @@ POST /api/auth/signin
 ```
 POST /api/products
 {
- "name": "Produto X",
- "description": "Descrição do Produto X",
- "price": 19.99
+    "name": "Produto X",
+    "description": "Descrição do Produto X",
+    "price": 19.99
 }
 ```
 
