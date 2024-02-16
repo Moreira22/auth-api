@@ -40,7 +40,7 @@ Este projeto é uma API de autenticação com a capacidade de cadastrar produtos
 
 1. Registrar um novo usuário:
 ```
-POST /api/auth/signup
+POST /api/auth/register
 {
     "username": "example_user",
     "email": "user@example.com",
@@ -51,7 +51,7 @@ POST /api/auth/signup
 2. Autenticar o usuário:
    
 ```
-POST /api/auth/signin
+POST /api/auth/login
 {
     "username": "example_user",
     "password": "password"
