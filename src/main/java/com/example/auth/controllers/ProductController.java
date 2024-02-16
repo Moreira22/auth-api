@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController()
-@RequestMapping("product")
+@RequestMapping("/product")
 public class ProductController {
 
     @Autowired
@@ -31,5 +31,7 @@ public class ProductController {
         List<ProductResponseDTO> productList = this.repository.findAll().stream().map(ProductResponseDTO::new).toList();
 
         return ResponseEntity.ok(productList);
+        // return ResponseEntity.ok("deu certo");
+
     }
 }
