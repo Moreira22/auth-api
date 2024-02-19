@@ -38,13 +38,24 @@ Este projeto é uma API de autenticação com a capacidade de cadastrar produtos
 
 ## Exemplo de Uso
 
-1. Registrar um novo usuário:
+1.1 Registrar um novo usuário como ADMIN:
 ```
 POST /api/auth/register
 {
     "username": "example_user",
     "email": "user@example.com",
     "password": "password"
+    "role": "ADMIN"
+}
+```
+1.2 Registrar um novo usuário como USER:
+```
+POST /api/auth/register
+{
+    "username": "example_user",
+    "email": "user@example.com",
+    "password": "password"
+    "role": "USER"
 }
 ```
 
