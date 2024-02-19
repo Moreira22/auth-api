@@ -18,8 +18,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfingirations {
 
-    // Autowired
-    // SecurityFilter securityFilter;
+    @Autowired
+    SecurityFilter secretFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -32,7 +32,7 @@ public class SecurityConfingirations {
                         .requestMatchers(HttpMethod.POST, "/product").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
-                // .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(secretFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 
